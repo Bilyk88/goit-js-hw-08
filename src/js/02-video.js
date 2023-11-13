@@ -14,20 +14,7 @@ function timeUpdate(data) {
     localStorage.setItem(KEY_TIME, JSON.stringify(currentTime));
 }
 
-// const savedTime = localStorage.getItem(KEY_TIME);
-// console.log(savedTime);
+const savedTime = localStorage.getItem(KEY_TIME);
+console.log(savedTime);
 
-// player.setCurrentTime(savedTime).then(function (seconds) {
-//     seconds = savedTime;
-
-// }).catch(function(error) {
-//     switch (error.name) {
-//         case 'RangeError':
-//             // the time was less than 0 or greater than the video’s duration
-//             break;
-
-//         default:
-//             // some other error occurred
-//             break;
-//     }
-// });
+player.setCurrentTime(savedTime);
