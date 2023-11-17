@@ -8,13 +8,10 @@ const KEY_TIME = "videoplayer-current-time";
 player.on('timeupdate', throttle(timeUpdate, 1000));
 
 function timeUpdate(data) {
-    console.log(data);
     const currentTime = data.seconds;
-    console.log(currentTime);
     localStorage.setItem(KEY_TIME, JSON.stringify(currentTime));
 }
 
 const savedTime = localStorage.getItem(KEY_TIME);
-console.log(savedTime);
 
 player.setCurrentTime(savedTime);
