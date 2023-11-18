@@ -12,6 +12,6 @@ function timeUpdate(data) {
     localStorage.setItem(KEY_TIME, JSON.stringify(currentTime));
 }
 
-const savedTime = localStorage.getItem(KEY_TIME);
+const savedTime = localStorage.getItem(KEY_TIME) ?? 0;
 
 player.setCurrentTime(savedTime);
